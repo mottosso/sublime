@@ -1,0 +1,10 @@
+{
+    "cmd": ["qmlscene", "$file"],
+    "selector": "source.qml",
+    "windows": {
+        "cmd": ["qmlscene.exe", "$file"],
+        "env": {"PATH": "C:\\Qt\\5.1.1\\msvc2012_64_opengl\\bin"},
+        "encoding": "cp866",
+        "shell": "true"
+    }
+}

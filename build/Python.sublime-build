@@ -1,0 +1,8 @@
+{
+	"cmd": ["python", "-u", "$file"],
+	"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+	"selector": "source.python",
+	"env": {"PYTHONPATH": "C:/Users/marcus/Dropbox/AF/development/marcus/pipi/src/python/2.7",
+			""},
+	"shell": true
+}

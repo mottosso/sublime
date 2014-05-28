@@ -1,0 +1,6 @@
+{
+	"cmd": ["python", "-m", "pipi.util.preprocessor", "$file"],
+    "selector": "source.proto",
+    "env": {"PYTHONPATH": "C:/Users/marcus/Dropbox/AF/development/marcus/pipi/python/2.7"},
+    "shell": true
+}
