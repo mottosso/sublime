@@ -1,4 +1,4 @@
-"""Open directory of current file in shell
+"""Run current file in shell
 
 Usage:
     1. Store in $sublime/Packages/User
@@ -14,29 +14,28 @@ Motivation:
         2. "Open Containing Folder.."
         3. Shift-right click in explorer (Windows)
         4. "Open command window here" (Windows)
+        5. Run file
 
     With this plugin, the process may be reduced into this:
-        1. Hit F12
+        1. Hit F18
 
 """
 
 
-import os
 import platform
 import subprocess
 import sublime_plugin
 
 shells = {
-    'Windows': 'cmd /K cd {path}',
+    'Windows': 'cmd /K {path}',
     'Linux': 'x-terminal-emulator {path}'
 }
 
 shell = shells[platform.system()]
 
 
-class OpenInShellCommand(sublime_plugin.TextCommand):
+class RunInShellCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         source_file = self.view.file_name()
-        source_dir = os.path.dirname(source_file)
-        command = shell.format(path=source_dir)
+        command = shell.format(path=source_file)
         subprocess.Popen(command)
