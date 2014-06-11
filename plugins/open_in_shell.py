@@ -28,7 +28,8 @@ import sublime_plugin
 
 shells = {
     'Windows': 'cmd /K cd {path}',
-    'Linux': 'x-terminal-emulator {path}'
+    'Linux': 'x-terminal-emulator {path}',
+    'Darwin': '{path}'
 }
 
 shell = shells[platform.system()]
