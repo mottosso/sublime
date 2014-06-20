@@ -37,6 +37,7 @@ shell = shells[platform.system()]
 
 class OpenInShellCommand(sublime_plugin.TextCommand):
     def run(self, edit):
+        self.view.run_command('save')
         source_file = self.view.file_name()
         source_dir = os.path.dirname(source_file)
         command = shell.format(path=source_dir)
